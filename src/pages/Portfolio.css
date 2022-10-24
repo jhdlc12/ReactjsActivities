@@ -1,0 +1,30 @@
+.container {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.cards {
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  margin: 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 0 0 10px 0;
+}
+.image > img {
+  width: 250px;
+  height: 250px;
+}
+.image {
+  border-bottom: 1px solid black;
+}
+.primText {
+  text-align: left;
+  margin: 10px;
+}
+.suppText {
+  text-align: left;
+  margin: 10px;
+}
