@@ -97,7 +97,7 @@ const MyCodingJournal = () => {
     setInfoList([]);
   };
   const deleteAllTask = () => {
-    let result = window.confirm("Are you sure you want to delete all task?");
+    let result = window.confirm("Are you sure you want to delete all tasks?");
     result ? (infoList2 = []) : (infoList2 = infoList2);
     setInfoList2([]);
   };
