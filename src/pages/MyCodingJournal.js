@@ -17,6 +17,21 @@ const MyCodingJournal = () => {
   let [id, setId] = useState(Date.now);
   let [infoList, setInfoList] = useState(list);
   let [infoList2, setInfoList2] = useState(list2);
+  //todays date
+  const d = new Date();
+  let month = d.getMonth() + 1;
+  let day = d.getDate();
+  let year = d.getFullYear();
+
+  if (month < 10) {
+    month = "0" + month.toString();
+  }
+  if (day < 10) {
+    day = "0" + day.toString();
+  }
+  let today = `${year}-${month}-${day}`;
+  let getToday = today.toString();
+  console.log(getToday);
 
   const handleSubmitThoughts = (event) => {
     event.preventDefault();
@@ -164,6 +179,7 @@ const MyCodingJournal = () => {
             name="form1Date"
             id="form1Date"
             ref={form1DateRef}
+            value={getToday}
           ></input>
           <br></br>
           <label>
@@ -216,6 +232,7 @@ const MyCodingJournal = () => {
             name="form2Date"
             id="form2Date"
             ref={form2DateRef}
+            min={getToday}
           ></input>
           <br></br>
           <label>
